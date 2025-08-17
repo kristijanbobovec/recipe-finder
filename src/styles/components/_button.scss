@@ -1,0 +1,29 @@
+/*
+*
+* Button
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.btn {
+  color: Variable.$color-white;
+  background-color: Variable.$btn-primary;
+  cursor: pointer;
+  border: none;
+  transition: Variable.$transition-duration;
+
+  &--primary {
+    padding: Function.px-to-rem(12px) Function.px-to-rem(16px);
+    border-radius: Function.px-to-rem(Variable.$radius-s);
+  }
+
+  &:hover {
+    background-color: Variable.$btn-hover;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px Variable.$color-white, 0 0 0 5px Variable.$btn-primary;
+  }
+}

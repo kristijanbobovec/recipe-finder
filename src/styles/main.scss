@@ -7,3 +7,7 @@
 // Base imports
 @use "./base/base";
 @use "./base/typography";
+
+// Components imports
+@use "./components/navigation";
+@use "./components/button";

@@ -1,0 +1,40 @@
+/*
+*
+* Navigation
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: Function.px-to-rem(20px) Function.px-to-rem(60px);
+
+  border-bottom: 1px solid Variable.$color-neutral-300;
+
+  position: relative;
+
+  background-color: Variable.$background;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: Function.px-to-rem(40px);
+
+    // Center navigation
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
