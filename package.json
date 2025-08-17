@@ -1,0 +1,16 @@
+{
+  "name": "recipe-finder",
+  "version": "1.0.0",
+  "description": "Frontend mentor challange (recipe finder)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Kristijan Bobovec",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.90.0",
+    "vite": "^7.1.2"
+  }
+}
