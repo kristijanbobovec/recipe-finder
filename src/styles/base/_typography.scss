@@ -53,6 +53,11 @@ body {
 }
 
 // .text-preset-6 - default on body
+.text-preset-6 {
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+}
 
 // Line heights inherited from body
 .text-preset-7 {

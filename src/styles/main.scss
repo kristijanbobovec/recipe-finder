@@ -1,6 +1,7 @@
 /*
 *
-* Frontend mentor challenge by Kristijan Bobovec
+* Frontend mentor challenge
+* Author: Kristijan Bobovec
 *
 */
 
@@ -8,6 +9,13 @@
 @use "./base/base";
 @use "./base/typography";
 
+// Utilities imports
+@use "./utilities/utilities";
+
+// Layout imports
+@use "./layout/layout";
+
 // Components imports
 @use "./components/navigation";
+@use "./components/hero";
 @use "./components/button";
