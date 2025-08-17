@@ -1,0 +1,80 @@
+/*
+*
+* Typography 
+*
+*/
+
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+body {
+  font-family: Variable.$font-name;
+  font-size: Function.px-to-rem(20px);
+  font-weight: Variable.$font-medium;
+  color: Variable.$text-primary;
+  letter-spacing: -0.4px;
+  line-height: 150%;
+}
+
+// Text presets
+.text-preset-1 {
+  font-size: Function.px-to-rem(72px);
+  line-height: 110%;
+  letter-spacing: -2px;
+  font-weight: Variable.$font-extrabold;
+}
+
+.text-preset-2 {
+  font-size: Function.px-to-rem(48px);
+  line-height: 120%;
+  letter-spacing: -2px;
+  font-weight: Variable.$font-extrabold;
+}
+
+.text-preset-3 {
+  font-size: Function.px-to-rem(32px);
+  line-height: 130%;
+  letter-spacing: -1px;
+  font-weight: Variable.$font-bold;
+}
+
+.text-preset-4 {
+  font-size: Function.px-to-rem(24px);
+  line-height: 130%;
+  letter-spacing: -1px;
+  font-weight: Variable.$font-bold;
+}
+
+.text-preset-5 {
+  // Inherited from text-preset - 6 which is default on body.
+  line-height: 140%;
+  letter-spacing: -0.4px;
+  font-weight: Variable.$font-medium;
+}
+
+// .text-preset-6 - default on body
+
+// Line heights inherited from body
+.text-preset-7 {
+  font-size: Function.px-to-rem(18px);
+  letter-spacing: -0.3px;
+  font-weight: Variable.$font-semibold;
+}
+
+.text-preset-8 {
+  font-size: Function.px-to-rem(16px);
+  letter-spacing: -0.3px;
+  font-weight: Variable.$font-bold;
+}
+
+.text-preset-9 {
+  font-size: Function.px-to-rem(16px);
+  letter-spacing: -0.3px;
+  font-weight: Variable.$font-medium;
+}
+
+.text-preset-10 {
+  font-size: Function.px-to-rem(14px);
+  letter-spacing: -0.3px;
+  font-weight: Variable.$font-bold;
+}

@@ -1,0 +1,50 @@
+/*
+*
+* Variables
+*
+*/
+
+// === Colors ===
+// Neutral pallete
+$color-neutral-900: #163a34;
+$color-neutral-800: #395852;
+$color-neutral-400: #d0dcd9;
+$color-neutral-300: #e0e6e3;
+$color-neutral-200: #e9ede8;
+$color-neutral-100: #f6f5f1;
+$color-neutral-0: #fff;
+
+// Orange pallete
+$color-orange: #fe9f6b;
+
+// Teal pallete
+$color-teal: #49ac9b;
+
+// Indigo pallete
+$color-indigo: #697ddb;
+
+// Semantic linking
+$color-primary: $color-neutral-900;
+$color-secondary: $color-orange;
+$color-tertiary: $color-indigo;
+
+$background: $color-neutral-100;
+
+$btn-primary: $color-neutral-900;
+$btn-hover: $color-neutral-800;
+
+$text-primary: $color-neutral-900;
+$text-secondary: $color-neutral-800;
+$text-tertiary: $color-neutral-0;
+
+// === Font ===
+
+// Base font settings
+$font-size-base: 16px;
+$font-name: "Nunito", sans-serif;
+
+// Font weights
+$font-extrabold: 800;
+$font-bold: 700;
+$font-semibold: 600;
+$font-medium: 500;

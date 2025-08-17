@@ -3,15 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Healty recipe finder: home page</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS Linking -->
     <link rel="stylesheet" href="./src/styles/main.scss" />
 
     <!-- Script Linking -->
-    <script type="module" src="./src/js/controller.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
   </head>
   <body>
-    <h1>Radi</h1>
+    <header class="header">
+      <nav class="nav">
+        <img
+          class="nav__logo"
+          src="./src/assets/images/logo.svg"
+          alt="Healty recipe finder"
+        />
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__link--active">Home</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Recipes</a></li>
+        </ul>
+
+        <a href="btn btn--primary">Browse recipes</a>
+      </nav>
+    </header>
   </body>
 </html>
