@@ -14,8 +14,15 @@
 
 // Layout imports
 @use "./layout/layout";
+@use "./layout/sections";
+@use "./layout/footer";
 
 // Components imports
 @use "./components/navigation";
+@use "./components/footer-navigation";
 @use "./components/hero";
 @use "./components/button";
+@use "./components/features";
+
+// Pages imports
+@use "./pages/home";

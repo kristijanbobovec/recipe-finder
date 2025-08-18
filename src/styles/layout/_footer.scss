@@ -1,0 +1,16 @@
+/*
+*
+* Footer
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.footer {
+  padding: Function.px-to-rem(Variable.$spacing-500);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

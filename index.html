@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Healty recipe finder: home page</title>
+    <title>Healthy recipe finder: home page</title>
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,45 +21,41 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
-        <img
-          class="nav__logo"
-          src="./src/assets/images/logo.svg"
-          alt="Healty recipe finder"
-        />
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav__logo">
+          <img
+            src="./src/assets/images/logo.svg"
+            alt="Healthy recipe finder logo"
+        /></a>
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link text-preset-7 nav__link--active"
-              >Home</a
-            >
+            <a href="index.html" class="nav__link text-preset-7">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link text-preset-7">About</a>
+            <a href="about.html" class="nav__link text-preset-7">About</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link text-preset-7">Recipes</a>
+            <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
           </li>
         </ul>
 
-        <button class="btn btn--primary text-preset-5">Browse recipes</button>
+        <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
       </nav>
 
-      <div class="hero hero--home-page">
+      <section class="hero hero--home" aria-label="Hero section">
         <div class="container">
           <div class="hero__content">
             <div class="hero__title">
               <h1 class="text-preset-1">
                 <span class="u-underline">Healthy</span> meals, zero fuss
               </h1>
-              <h2 class="text-preset-6 u-max-chars-40 u-text-center">
+              <p class="u-max-chars-40 u-text-center">
                 Discover eight quick, whole-food recipes that you can cook
                 tonight—no processed junk, no guesswork.
-              </h2>
+              </p>
             </div>
-            <button class="btn btn--primary btn--m text-preset-5">
-              Start exploring
-            </button>
+            <a href="#" class="btn btn--m text-preset-5">Start exploring</a>
             <img
               class="hero__image"
               src="./src/assets/images/image-home-hero-large.webp"
@@ -67,7 +63,128 @@
             />
           </div>
         </div>
-      </div>
+      </section>
     </header>
+
+    <main class="container">
+      <section class="section u-section-divider">
+        <div class="section__content section__content--bottom">
+          <h2 class="text-preset-2">What you'll get</h2>
+          <div class="features">
+            <div class="features__item">
+              <div class="features__icon">
+                <img
+                  class="features__img"
+                  src="./src/assets/images/icon-whole-food-recipes.svg"
+                  alt="Whole-food recipes"
+                />
+              </div>
+              <div class="features__description">
+                <h3 class="text-preset-3">Whole-food recipes</h3>
+                <p>Each dish uses everyday, unprocessed ingredients.</p>
+              </div>
+            </div>
+            <div class="features__item">
+              <div class="features__icon">
+                <img
+                  class="features__img"
+                  src="./src/assets/images/icon-minimum-fuss.svg"
+                  alt="Minimum fuss"
+                />
+              </div>
+              <div class="features__description">
+                <h3 class="text-preset-3">Minimum fuss</h3>
+                <p>
+                  All recipes are designed to make eating healthy quick and
+                  easy.
+                </p>
+              </div>
+            </div>
+            <div class="features__item">
+              <div class="features__icon">
+                <img
+                  class="features__img"
+                  src="./src/assets/images/icon-search-in-seconds.svg"
+                  alt="Search in seconds"
+                />
+              </div>
+              <div class="features__description">
+                <h3 class="text-preset-3">Search in seconds</h3>
+                <p>
+                  Filter by name or ingredient and jump straight to the recipe
+                  you need.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__content section__content--right">
+          <div class="section__description">
+            <h2 class="text-preset-2">Built for real life</h2>
+            <p>
+              Cooking shouldn't be complicated. These recipes come in under
+              <span class="text-preset-5 u-underline u-underline--solid"
+                >30 minutes</span
+              >
+              of active time, fit busy schedules, and taste good enough to
+              repeat.
+            </p>
+            <p>
+              Whether you're new to the kitchen or just need fresh ideas, we've
+              got you covered.
+            </p>
+          </div>
+          <div class="section__image">
+            <img
+              src="./src/assets/images/image-home-real-life-large.webp"
+              alt="Home real life"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta">
+        <div class="section__content section__content--bottom">
+          <div class="section__description">
+            <h2 class="text-preset-2 u-text-center">Ready to cook smarter?</h2>
+            <p class="u-text-center">
+              Hit the button, pick a recipe, and get dinner on the table—fast.
+            </p>
+          </div>
+          <a href="#" class="btn btn--s text-preset-5">Browse recipes</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <nav class="footer-nav" aria-label="Social network links">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img
+                  src="./src/assets/images/icon-instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-bluesky.svg" alt="Bluesky" />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-tiktok.svg" alt="Tik Tok" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

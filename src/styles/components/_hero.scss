@@ -7,33 +7,5 @@
 @use "../abstracts/variables" as Variable;
 
 .hero {
-  padding-top: Function.px-to-rem(Variable.$gap-xl);
-  margin-bottom: Function.px-to-rem(Variable.$gap-xxl);
-
-  &--home-page {
-    background-image: url("../../assets/images/pattern-squiggle-1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-
-    .hero__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: Function.px-to-rem(Variable.$gap-m);
-    }
-
-    .hero__title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: Function.px-to-rem(Variable.$gap-xs);
-    }
-
-    .hero__image {
-      margin-top: Function.px-to-rem(Variable.$gap-m);
-      border-radius: Variable.$radius-s;
-      box-shadow: 0 0 0 Function.px-to-rem(12px) Variable.$color-white;
-    }
-  }
+  padding-top: Function.px-to-rem(Variable.$spacing-1000);
 }

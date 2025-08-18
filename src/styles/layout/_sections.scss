@@ -1,0 +1,52 @@
+/*
+*
+* Sections 
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.section {
+  padding: Function.px-to-rem(Variable.$spacing-1200) 0;
+
+  &__image {
+    border-radius: Function.px-to-rem(Variable.$radius-16);
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: Function.px-to-rem(Variable.$spacing-300);
+    flex: 0 1 40%;
+
+    &--bigger {
+      flex: 0 1 55%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: Function.px-to-rem(Variable.$spacing-600);
+
+    &--bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--right {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &--cta {
+    border-radius: Function.px-to-rem(Variable.$radius-16);
+
+    // Background dummies
+    background: url("../../assets/images/pattern-fork.svg") no-repeat -10% 230%,
+      url("../../assets/images/pattern-knife.svg") no-repeat 110% top,
+      Variable.$color-neutral-200;
+  }
+}

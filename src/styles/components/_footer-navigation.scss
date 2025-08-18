@@ -1,0 +1,15 @@
+/*
+*
+* Footer navigation
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.footer-nav {
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: Function.px-to-rem(Variable.$spacing-300);
+  }
+}

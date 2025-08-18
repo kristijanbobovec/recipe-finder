@@ -9,18 +9,26 @@
 .btn {
   color: Variable.$color-white;
   background-color: Variable.$btn-primary;
+  transition: Variable.$transition-duration ease;
+  border-radius: Function.px-to-rem(Variable.$radius-10);
   cursor: pointer;
   border: none;
-  transition: Variable.$transition-duration;
 
-  &--primary {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &--xs {
     padding: Function.px-to-rem(12px) Function.px-to-rem(16px);
-    border-radius: Function.px-to-rem(Variable.$radius-s);
+  }
+
+  &--s {
+    padding: Function.px-to-rem(16px) Function.px-to-rem(24px);
   }
 
   &--m {
     padding: Function.px-to-rem(16px) Function.px-to-rem(32px);
-    border-radius: Function.px-to-rem(Variable.$radius-s);
   }
 
   &:hover {

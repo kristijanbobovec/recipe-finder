@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy recipe finder: about page</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+
+    <!-- Script Linking -->
+    <script type="module" src="./src/js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav__logo">
+          <img
+            src="./src/assets/images/logo.svg"
+            alt="Healthy recipe finder logo"
+        /></a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link text-preset-7">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link text-preset-7">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
+          </li>
+        </ul>
+
+        <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
+      </nav>
+
+      <section class="hero hero--home" aria-label="Hero section">
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__title">
+              <h1 class="text-preset-1">
+                <span class="u-underline">Healthy</span> meals, zero fuss
+              </h1>
+              <p class="u-max-chars-40 u-text-center">
+                Discover eight quick, whole-food recipes that you can cook
+                tonight—no processed junk, no guesswork.
+              </p>
+            </div>
+            <a href="#" class="btn btn--m text-preset-5">Start exploring</a>
+            <img
+              class="hero__image"
+              src="./src/assets/images/image-home-hero-large.webp"
+              alt="Hero image"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <section class="section section--cta">
+        <div class="section__content section__content--bottom">
+          <div class="section__description">
+            <h2 class="text-preset-2 u-text-center">Ready to cook smarter?</h2>
+            <p class="u-text-center">
+              Hit the button, pick a recipe, and get dinner on the table—fast.
+            </p>
+          </div>
+          <a href="#" class="btn btn--s text-preset-5">Browse recipes</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <nav class="footer-nav" aria-label="Social network links">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img
+                  src="./src/assets/images/icon-instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-bluesky.svg" alt="Bluesky" />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-tiktok.svg" alt="Tik Tok" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

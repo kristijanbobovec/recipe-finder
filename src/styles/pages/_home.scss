@@ -1,0 +1,34 @@
+/*
+*
+* Home Page
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.hero--home {
+  background-image: url("../../assets/images/pattern-squiggle-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: Function.px-to-rem(Variable.$spacing-500);
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: Function.px-to-rem(Variable.$spacing-150);
+  }
+
+  .hero__image {
+    margin-top: Function.px-to-rem(Variable.$spacing-500);
+    border-radius: Variable.$radius-10;
+    box-shadow: 0 0 0 Function.px-to-rem(12px) Variable.$color-white;
+  }
+}

@@ -51,9 +51,11 @@ $font-semibold: 600;
 $font-medium: 500;
 
 // === Radius ===
-$radius-xxs: 4px;
-$radius-xs: 8px;
-$radius-s: 10px;
+$radius-16: 16px;
+$radius-12: 12px;
+$radius-10: 10px;
+$radius-8: 8px;
+$radius-4: 4px;
 
 // === Transition ===
 
@@ -63,10 +65,17 @@ $transition-duration: 0.2s;
 // === Magins and paddings ===
 
 // Gaps
-$gap-xxl: 96px;
-$gap-xl: 80px;
-$gap-m: 40px;
-$gap-xs: 12px;
+$spacing-1200: 96px;
+$spacing-1000: 80px;
+$spacing-600: 48px;
+$spacing-500: 40px;
+$spacing-400: 32px;
+$spacing-300: 24px;
+$spacing-150: 12px;
 
 // === Container max width ===
 $container-max-width: 1192px;
+
+// === Icons Size ====
+$icon-width: 60px;
+$icon-height: 60px;

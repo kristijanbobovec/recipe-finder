@@ -34,7 +34,27 @@
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: inherit;
+
+    &--active::before,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 3px;
+      opacity: 0;
+      background-color: Variable.$color-secondary;
+      transition: all Variable.$transition-duration ease;
+    }
+
+    &--active::before,
+    &:hover::before {
+      bottom: -3px;
+      opacity: 1;
+    }
   }
 }
