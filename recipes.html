@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy recipe finder: recipes page</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+
+    <!-- Script Linking -->
+    <script type="module" src="./src/js/main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav__logo">
+          <img
+            src="./src/assets/images/logo.svg"
+            alt="Healthy recipe finder logo"
+        /></a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link text-preset-7">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link text-preset-7">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
+          </li>
+        </ul>
+
+        <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
+      </nav>
+
+      <section class="hero hero--recipes" aria-label="Hero section">
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__main">
+              <h1 class="text-preset-2 u-text-center">
+                Explore our simple, healthy recipes
+              </h1>
+              <p class="u-max-chars-60 u-text-center">
+                Discover eight quick, whole-food dishes that fit real-life
+                schedules and taste amazing. Use the search bar to find a recipe
+                by name or ingredient, or simply scroll the list and let
+                something delicious catch your eye.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="container">
+      <section class="section section--bottom-padding" aria-label="Recipe list">
+        <form action="" class="filter-bar">
+          <div class="filter-bar__filters">
+            <div class="filter-bar__group">
+              <button class="form-button text-preset-7" type="button">
+                Max Prep Time
+                <svg class="form-button__icon">
+                  <use href="./src/assets/images/icon-chevron-down.svg"></use>
+                </svg>
+              </button>
+
+              <ul class="form-menu">
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="prep-time"
+                      class="form-menu__input"
+                      value="0"
+                    />0 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="prep-time"
+                      value="5"
+                      class="form-menu__input"
+                    />5 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="prep-time"
+                      value="10"
+                      class="form-menu__input"
+                    />10 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="prep-time"
+                      value="15"
+                      class="form-menu__input"
+                    />15 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="prep-time"
+                      value="20"
+                      class="form-menu__input"
+                    />20 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <button class="text-preset-9 form-menu__clear">Clear</button>
+                </li>
+              </ul>
+            </div>
+
+            <button class="form-button text-preset-7" type="button">
+              Max Cook Time
+              <svg class="form-button__icon">
+                <use href="./src/assets/images/icon-chevron-down.svg"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="from-search">
+            <button class="from-search__submit" type="submit">a</button>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="from-search__input"
+              placeholder="Search by name or ingredient"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <nav class="footer-nav" aria-label="Social network links">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img
+                  src="./src/assets/images/icon-instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-bluesky.svg" alt="Bluesky" />
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#" class="footer-nav__link">
+                <img src="./src/assets/images/icon-tiktok.svg" alt="Tik Tok" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

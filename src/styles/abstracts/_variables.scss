@@ -51,27 +51,34 @@ $font-semibold: 600;
 $font-medium: 500;
 
 // === Radius ===
+$radius-999: 999px;
 $radius-16: 16px;
 $radius-12: 12px;
 $radius-10: 10px;
 $radius-8: 8px;
+$radius-6: 6px;
 $radius-4: 4px;
 
 // === Transition ===
 
 // Duration
 $transition-duration: 0.2s;
+$transition-duration-long: 0.4s;
 
 // === Magins and paddings ===
 
 // Gaps
 $spacing-1200: 96px;
 $spacing-1000: 80px;
+$spacing-800: 64px;
 $spacing-600: 48px;
 $spacing-500: 40px;
 $spacing-400: 32px;
 $spacing-300: 24px;
+$spacing-200: 16px;
 $spacing-150: 12px;
+$spacing-100: 8px;
+$spacing-025: 2px;
 
 // === Container max width ===
 $container-max-width: 1192px;

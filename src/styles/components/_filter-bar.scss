@@ -1,0 +1,21 @@
+/*
+*
+* Filter-bar
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+
+  &__filters {
+    display: flex;
+    gap: Function.px-to-rem(Variable.$spacing-200);
+  }
+
+  &__group {
+    position: relative;
+  }
+}

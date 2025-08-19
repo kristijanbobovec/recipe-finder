@@ -9,21 +9,26 @@
 .section {
   padding: Function.px-to-rem(Variable.$spacing-1200) 0;
 
+  &--bottom-padding {
+    padding-top: 0;
+    padding-bottom: Function.px-to-rem(Variable.$spacing-1200);
+  }
+
   &__image {
     border-radius: Function.px-to-rem(Variable.$radius-16);
     overflow: hidden;
-    flex: 1;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     gap: Function.px-to-rem(Variable.$spacing-300);
-    flex: 0 1 40%;
+  }
 
-    &--bigger {
-      flex: 0 1 55%;
-    }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: Function.px-to-rem(Variable.$spacing-150);
   }
 
   &__content {
@@ -38,6 +43,18 @@
     &--right {
       align-items: center;
       justify-content: space-between;
+
+      .section__description {
+        flex: 0 1 45%;
+
+        &--small {
+          flex: 0 1 35%;
+        }
+      }
+
+      .section__description + * {
+        flex: 1;
+      }
     }
   }
 

@@ -33,6 +33,17 @@
 .u-max-chars-40 {
   max-width: 40ch;
 }
+.u-max-chars-60 {
+  max-width: 60ch;
+}
+
+.u-self-start {
+  align-self: start;
+}
+
+.u-default-list {
+  margin-left: 20px;
+}
 
 .u-section-divider {
   border-bottom: 1px solid Variable.$color-neutral-300;

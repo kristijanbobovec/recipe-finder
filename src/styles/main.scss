@@ -22,7 +22,14 @@
 @use "./components/footer-navigation";
 @use "./components/hero";
 @use "./components/button";
+@use "./components/badge";
 @use "./components/features";
+@use "./components/list";
+@use "./components/filter-bar";
+@use "./components/form-button";
+@use "./components/form-menu";
 
 // Pages imports
 @use "./pages/home";
+@use "./pages/about";
+@use "./pages/recipes";

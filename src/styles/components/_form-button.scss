@@ -1,0 +1,43 @@
+/*
+*
+* Form-button
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.form-button {
+  display: flex;
+  align-items: center;
+  gap: Function.px-to-rem(Variable.$spacing-100);
+
+  cursor: pointer;
+
+  background: Variable.$color-white;
+
+  border-radius: Function.px-to-rem(Variable.$radius-10);
+  padding: Function.px-to-rem(10px) Function.px-to-rem(16px);
+
+  border: 1px solid Variable.$color-neutral-300;
+
+  transition: all Variable.$transition-duration ease;
+
+  &--selected,
+  &:hover {
+    border: 1px solid Variable.$color-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px Variable.$background, 0 0 0 4px Variable.$btn-primary;
+    border: 1px solid Variable.$color-neutral-300;
+  }
+
+  &__icon {
+    width: 1em;
+    height: 1em;
+  }
+}

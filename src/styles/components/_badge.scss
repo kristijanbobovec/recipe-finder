@@ -1,0 +1,13 @@
+/*
+*
+* Badge
+*
+*/
+@use "../abstracts/functions" as Function;
+@use "../abstracts/variables" as Variable;
+
+.badge {
+  background-color: Variable.$color-secondary;
+  border-radius: Variable.$radius-6;
+  padding: Function.px-to-rem(2px) Function.px-to-rem(6px);
+}
