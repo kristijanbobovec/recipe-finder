@@ -9,8 +9,11 @@
   display: flex;
   flex-direction: column;
   gap: px-to-rem($spacing-600);
-
   margin-left: px-to-rem(50px);
+
+  @include breakpoint(sm) {
+    gap: px-to-rem($spacing-300);
+  }
 
   &--sm {
     gap: px-to-rem($spacing-100);

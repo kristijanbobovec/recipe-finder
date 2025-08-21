@@ -7,10 +7,23 @@
 .hero--about {
   border-bottom: 1px solid $color-neutral-300;
   padding-bottom: $spacing-1200;
+
+  @include breakpoint(lg) {
+    padding-bottom: $spacing-1000;
+  }
+
+  @include breakpoint(sm) {
+    padding-bottom: $spacing-800;
+  }
+
   .hero__content {
     display: flex;
     align-items: center;
     gap: $spacing-800;
+
+    @include breakpoint(lg) {
+      flex-direction: column;
+    }
   }
 
   .hero__main {
@@ -45,6 +58,12 @@
       height: 120%;
       background: url("../../assets/images/pattern-squiggle-2.svg") no-repeat
         100% 70%;
+
+      @include breakpoint(lg) {
+        width: 0;
+        height: 0;
+        background: none;
+      }
     }
   }
 }

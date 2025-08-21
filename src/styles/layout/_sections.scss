@@ -18,6 +18,9 @@
 
   &--padding-sm {
     padding: px-to-rem($spacing-800) 0;
+    @include breakpoint(lg) {
+      padding: px-to-rem($spacing-600) 0;
+    }
   }
 
   &--bottom-padding {

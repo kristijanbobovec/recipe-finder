@@ -20,6 +20,17 @@
 
   transition: all $transition-duration ease;
 
+  color: $color-primary;
+
+  @include breakpoint(lg) {
+    width: max-content;
+  }
+
+  @include breakpoint(md-lg) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
   &--selected,
   &:hover {
     border: 1px solid $color-primary;

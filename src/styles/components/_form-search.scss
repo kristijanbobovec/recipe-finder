@@ -22,6 +22,16 @@
 
   transition: box-shadow $transition-duration ease;
 
+  @include breakpoint(lg) {
+    margin-left: px-to-rem($spacing-150);
+    width: 100%;
+  }
+
+  @include breakpoint(md-lg) {
+    margin-top: px-to-rem($spacing-200);
+    margin-left: 0;
+  }
+
   &:has(.form-search__input:focus-visible) {
     border: 1px solid $color-neutral-300;
     box-shadow: $box-shadow-focus;
@@ -41,6 +51,7 @@
   }
 
   &__submit {
+    flex-shrink: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;

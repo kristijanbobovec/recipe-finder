@@ -18,6 +18,14 @@
 
   background-color: $background;
 
+  @include breakpoint(xlg) {
+    padding: px-to-rem(20px) px-to-rem(32px);
+  }
+
+  @include breakpoint(md) {
+    padding: px-to-rem(16px);
+  }
+
   & > :nth-child(3) {
     @include breakpoint(lg) {
       display: none;
@@ -30,6 +38,16 @@
     list-style: none;
     gap: px-to-rem(40px);
 
+    @include breakpoint(lg) {
+      display: none;
+    }
+
+    &--active {
+      @include breakpoint(lg) {
+        display: flex;
+      }
+    }
+
     // Center navigation
     position: absolute;
     top: 50%;
@@ -37,14 +55,51 @@
     transform: translate(-50%, -50%);
 
     @include breakpoint(lg) {
-      display: none;
+      margin: 0 px-to-rem(32px);
+      transform: translate(0, 0);
+      left: 0;
+      top: 100%;
+      flex-direction: column;
+      width: calc(100% - px-to-rem(64px));
+      background-color: $color-white;
+      z-index: 99;
+      padding: px-to-rem($spacing-100);
+      border-radius: px-to-rem($radius-8);
+      gap: 0;
     }
+
+    @include breakpoint(md) {
+      margin: 0 px-to-rem(16px);
+      width: calc(100% - px-to-rem(32px));
+    }
+  }
+
+  &__item-button {
+    margin-top: px-to-rem($spacing-100);
+    display: none;
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  &__link-button {
+    display: block;
+    text-align: center;
   }
 
   &__link {
     position: relative;
     text-decoration: none;
     color: inherit;
+    transition: all $transition-duration ease;
+
+    border-radius: px-to-rem($radius-8);
+
+    @include breakpoint(lg) {
+      display: block;
+      width: 100%;
+      padding: px-to-rem($spacing-150) px-to-rem($spacing-100);
+    }
 
     &--active::before,
     &::before {
@@ -57,12 +112,46 @@
       opacity: 0;
       background-color: $color-secondary;
       transition: all $transition-duration ease;
+
+      @include breakpoint(lg) {
+        bottom: 3px;
+      }
     }
 
     &--active::before,
     &:hover::before {
       bottom: -3px;
       opacity: 1;
+
+      @include breakpoint(lg) {
+        bottom: -0px;
+      }
+    }
+  }
+
+  &__hamburger {
+    flex-shrink: 0;
+    border: none;
+
+    height: px-to-rem(40px);
+    width: px-to-rem(40px);
+
+    display: none;
+    place-items: center;
+
+    cursor: pointer;
+
+    background-color: $color-neutral-300;
+    border-radius: $radius-4;
+
+    @include breakpoint(lg) {
+      display: grid;
+      margin-left: px-to-rem($spacing-300);
+    }
+    & > svg {
+      display: block;
+      height: px-to-rem(18px);
+      width: px-to-rem(16px);
     }
   }
 }

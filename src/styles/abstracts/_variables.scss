@@ -101,10 +101,11 @@ $box-shadow-hero-img-lg: 0 0 0 7px $color-white;
 $box-shadow-hero-img-sm: 0 0 0 3px $color-white;
 
 // === Breakpoints ===
-// 375px, 700px, 900px, 1440px
+// 375px, 600px, 700px, 900px, 1440px
 $breakpoints: (
   "sm": 23.4375em,
   "md": 37.5em,
+  "md-lg": 43.75em,
   "lg": 56.24em,
   "xlg": 90em,
 );

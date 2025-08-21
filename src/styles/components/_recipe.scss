@@ -9,6 +9,10 @@
   gap: px-to-rem($spacing-500);
   align-items: start;
 
+  @include breakpoint(lg) {
+    flex-direction: column;
+  }
+
   &__img {
     border-radius: px-to-rem($radius-16);
     overflow: hidden;

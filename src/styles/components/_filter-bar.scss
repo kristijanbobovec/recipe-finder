@@ -8,9 +8,17 @@
   display: flex;
   justify-content: space-between;
 
+  @include breakpoint(md-lg) {
+    flex-direction: column;
+  }
+
   &__filters {
     display: flex;
     gap: px-to-rem($spacing-200);
+
+    @include breakpoint(md-lg) {
+      flex-direction: column;
+    }
   }
 
   &__group {

@@ -28,7 +28,7 @@
             alt="Healthy recipe finder logo"
         /></a>
 
-        <ul class="nav__list">
+        <ul class="nav__list" id="main-navigation">
           <li class="nav__item">
             <a href="index.html" class="nav__link text-preset-7">Home</a>
           </li>
@@ -43,9 +43,24 @@
           <li class="nav__item">
             <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
           </li>
+          <li class="nav__item nav__item-button">
+            <a href="#" class="nav__link-button btn btn--xs text-preset-5"
+              >Browse recipes</a
+            >
+          </li>
         </ul>
 
         <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
+        <button
+          class="nav__hamburger"
+          aria-expanded="false"
+          aria-label="Hamburger menu"
+          aria-controls="main-navigation"
+        >
+          <svg aria-hidden="true">
+            <use href="#icon-hamburger-menu"></use>
+          </svg>
+        </button>
       </nav>
 
       <section class="hero hero--about" aria-labelledby="hero-title">
@@ -188,8 +203,10 @@
       <section class="section section--cta">
         <div class="section__content section__content--bottom">
           <div class="section__description">
-            <h2 class="text-preset-2 u-text-center">Ready to cook smarter?</h2>
-            <p class="u-text-center">
+            <h2 class="text-preset-2 u-text-center-always">
+              Ready to cook smarter?
+            </h2>
+            <p class="u-text-center-always">
               Hit the button, pick a recipe, and get dinner on the table—fast.
             </p>
           </div>

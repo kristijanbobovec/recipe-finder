@@ -5,7 +5,11 @@
 */
 @use "../abstracts" as *;
 .hero--recipes {
-  padding-bottom: $spacing-800;
+  padding-bottom: px-to-rem($spacing-800);
+
+  @include breakpoint(md) {
+    padding-bottom: $spacing-600;
+  }
 
   .hero__main {
     display: flex;

@@ -28,7 +28,7 @@
             alt="Healthy recipe finder logo"
         /></a>
 
-        <ul class="nav__list">
+        <ul class="nav__list" id="main-navigation">
           <li class="nav__item">
             <a href="index.html" class="nav__link text-preset-7">Home</a>
           </li>
@@ -43,9 +43,24 @@
               >Recipes</a
             >
           </li>
+          <li class="nav__item nav__item-button">
+            <a href="#" class="nav__link-button btn btn--xs text-preset-5"
+              >Browse recipes</a
+            >
+          </li>
         </ul>
 
         <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
+        <button
+          class="nav__hamburger"
+          aria-expanded="false"
+          aria-label="Hamburger menu"
+          aria-controls="main-navigation"
+        >
+          <svg aria-hidden="true">
+            <use href="#icon-hamburger-menu"></use>
+          </svg>
+        </button>
       </nav>
 
       <section class="hero hero--recipes" aria-labelledby="hero-title">
@@ -80,11 +95,11 @@
               >
                 Max Prep Time
                 <svg class="form-button__icon">
-                  <use href="./src/assets/images/icon-chevron-down.svg"></use>
+                  <use href="#icon-chevron-down"></use>
                 </svg>
               </button>
 
-              <ul class="form-menu form-menu--active" id="form-menu--1">
+              <ul class="form-menu" id="form-menu--1">
                 <li class="form-menu__item">
                   <label class="form-menu__label text-preset-7"
                     ><input
@@ -130,7 +145,7 @@
               >
                 Max Cook Time
                 <svg class="form-button__icon">
-                  <use href="./src/assets/images/icon-chevron-down.svg"></use>
+                  <use href="#icon-chevron-down"></use>
                 </svg>
               </button>
 
@@ -201,7 +216,7 @@
               aria-label="Search recipes"
             >
               <svg class="form-search__icon">
-                <use href="./src/assets/images/icon-search.svg"></use>
+                <use href="#icon-search"></use>
               </svg>
             </button>
             <input
@@ -218,11 +233,12 @@
         <div class="recipes">
           <article class="recipes__item">
             <header class="recipes__header">
-              <img
-                src="./src/assets/images/mediterranean-chickpea-salad-small.webp"
-                alt="Mediterranean Chickpea Salad"
-                class="recipes__img"
-              />
+              <div class="recipes__img">
+                <img
+                  src="./src/assets/images/mediterranean-chickpea-salad-small.webp"
+                  alt="Mediterranean Chickpea Salad"
+                />
+              </div>
               <div class="recipes__info">
                 <div class="recipes__description">
                   <h2 class="text-preset-5">Mediterranean Chickpea Salad</h2>
@@ -234,19 +250,19 @@
                 <div class="recipes__details">
                   <div class="recipes__detail">
                     <svg class="recipes__icon">
-                      <use href="./src/assets/images/icon-servings.svg"></use>
+                      <use href="#icon-servings"></use>
                     </svg>
                     <span class="text-preset-9">Servings: 2</span>
                   </div>
                   <div class="recipes__detail">
                     <svg class="recipes__icon">
-                      <use href="./src/assets/images/icon-prep-time.svg"></use>
+                      <use href="#icon-prep-time"></use>
                     </svg>
                     <span class="text-preset-9">Prep: 10 mins</span>
                   </div>
                   <div class="recipes__detail">
                     <svg class="recipes__icon">
-                      <use href="./src/assets/images/icon-cook-time.svg"></use>
+                      <use href="#icon-cook-time"></use>
                     </svg>
                     <span class="text-preset-9">Cook: 0 min</span>
                   </div>
