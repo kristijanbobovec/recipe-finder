@@ -20,6 +20,14 @@ body {
   line-height: 110%;
   letter-spacing: -2px;
   font-weight: $font-extrabold;
+
+  @include breakpoint(lg) {
+    font-size: px-to-rem(64px);
+  }
+
+  @include breakpoint(md) {
+    font-size: px-to-rem(52px);
+  }
 }
 
 .text-preset-2 {
@@ -27,6 +35,10 @@ body {
   line-height: 120%;
   letter-spacing: -2px;
   font-weight: $font-extrabold;
+
+  @include breakpoint(md) {
+    font-size: px-to-rem(40px);
+  }
 }
 
 .text-preset-3 {

@@ -6,9 +6,24 @@
 @use "../abstracts" as *;
 .footer {
   padding: px-to-rem($spacing-500);
+
+  @include breakpoint(sm) {
+    padding: px-to-rem($spacing-400);
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      gap: $spacing-300;
+    }
+  }
+
+  &__text {
+    @include breakpoint(md) {
+      order: 2;
+    }
   }
 }

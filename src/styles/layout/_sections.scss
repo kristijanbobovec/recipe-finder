@@ -7,6 +7,15 @@
 .section {
   padding: px-to-rem($spacing-1200) 0;
 
+  @include breakpoint(md) {
+    padding: px-to-rem($spacing-1000) 0;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: px-to-rem($spacing-800);
+    padding-bottom: 0;
+  }
+
   &--padding-sm {
     padding: px-to-rem($spacing-800) 0;
   }
@@ -46,6 +55,10 @@
       align-items: center;
       justify-content: space-between;
 
+      @include breakpoint(lg) {
+        flex-direction: column;
+      }
+
       .section__description {
         flex: 0 1 45%;
 
@@ -67,5 +80,26 @@
     background: url("../../assets/images/pattern-fork.svg") no-repeat -10% 230%,
       url("../../assets/images/pattern-knife.svg") no-repeat 110% top,
       $color-neutral-200;
+
+    @include breakpoint(lg) {
+      background: url("../../assets/images/pattern-fork.svg") no-repeat -7% 130%,
+        url("../../assets/images/pattern-knife.svg") no-repeat 107% top,
+        $color-neutral-200;
+      padding: px-to-rem($spacing-1000) 0;
+      background-size: 30%;
+    }
+    @include breakpoint(md) {
+      background: url("../../assets/images/pattern-fork.svg") no-repeat -7% 100%,
+        url("../../assets/images/pattern-knife.svg") no-repeat 107% -5%,
+        $color-neutral-200;
+      background-size: 25%;
+      padding: $spacing-1000 $spacing-200;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: px-to-rem($spacing-800);
+      background: $color-neutral-200;
+      padding: $spacing-600 $spacing-200;
+    }
   }
 }

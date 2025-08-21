@@ -6,4 +6,8 @@
 @use "../abstracts" as *;
 .hero {
   padding-top: px-to-rem($spacing-1000);
+
+  @include breakpoint(md) {
+    padding-top: px-to-rem($spacing-600);
+  }
 }

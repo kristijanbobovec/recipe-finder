@@ -18,6 +18,12 @@
 
   background-color: $background;
 
+  & > :nth-child(3) {
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: center;
@@ -29,6 +35,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include breakpoint(lg) {
+      display: none;
+    }
   }
 
   &__link {

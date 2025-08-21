@@ -97,12 +97,14 @@ $box-shadow-focus: 0 0 0 2px $background, 0 0 0 4px $btn-primary;
 $box-shadow-radio-focus: 0 0 0 4px $color-neutral-200;
 $box-shadow-radio-input: 0 1px 2px 0 rgba($color-primary, 0.12);
 $box-shadow-hero-img: 0 0 0 12px $color-white;
+$box-shadow-hero-img-lg: 0 0 0 7px $color-white;
+$box-shadow-hero-img-sm: 0 0 0 3px $color-white;
 
 // === Breakpoints ===
 // 375px, 700px, 900px, 1440px
 $breakpoints: (
   "sm": 23.4375em,
-  "md": 43.75em,
+  "md": 37.5em,
   "lg": 56.24em,
   "xlg": 90em,
 );

@@ -10,11 +10,20 @@
   background-size: cover;
   background-position: bottom;
 
+  @include breakpoint(lg) {
+    background-size: contain;
+  }
+
   .hero__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: px-to-rem($spacing-500);
+
+    @include breakpoint(md) {
+      align-items: start;
+      gap: px-to-rem($spacing-400);
+    }
   }
 
   .hero__header {
@@ -22,11 +31,28 @@
     flex-direction: column;
     align-items: center;
     gap: px-to-rem($spacing-150);
+
+    @include breakpoint(md) {
+      align-items: start;
+      gap: px-to-rem($spacing-200);
+    }
   }
 
   .hero__image {
     margin-top: px-to-rem($spacing-500);
     border-radius: $radius-10;
     box-shadow: $box-shadow-hero-img;
+
+    @include breakpoint(lg) {
+      box-shadow: $box-shadow-hero-img-lg;
+      object-fit: cover;
+      min-height: px-to-rem(250px);
+    }
+
+    @include breakpoint(sm) {
+      box-shadow: $box-shadow-hero-img-sm;
+      object-fit: cover;
+      min-height: px-to-rem(200px);
+    }
   }
 }

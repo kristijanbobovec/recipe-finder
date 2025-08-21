@@ -8,4 +8,12 @@
   max-width: px-to-rem($container-max-width);
   width: 100%;
   margin: 0 auto;
+
+  @include breakpoint(xlg) {
+    padding: 0 $spacing-300;
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 $spacing-200;
+  }
 }

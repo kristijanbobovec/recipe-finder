@@ -10,12 +10,24 @@
   gap: px-to-rem($spacing-400);
   flex-wrap: wrap;
 
+  @include breakpoint(lg) {
+    flex-direction: column;
+  }
+
+  @include breakpoint(sm) {
+    gap: px-to-rem($spacing-300);
+  }
+
   &__item {
     flex: 1;
     min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: px-to-rem($spacing-300);
+
+    @include breakpoint(sm) {
+      gap: px-to-rem($spacing-150);
+    }
   }
 
   &__icon {
