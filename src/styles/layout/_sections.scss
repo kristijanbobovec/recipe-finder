@@ -3,37 +3,39 @@
 * Sections 
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .section {
-  padding: Function.px-to-rem(Variable.$spacing-1200) 0;
+  padding: px-to-rem($spacing-1200) 0;
+
+  &--padding-sm {
+    padding: px-to-rem($spacing-800) 0;
+  }
 
   &--bottom-padding {
     padding-top: 0;
-    padding-bottom: Function.px-to-rem(Variable.$spacing-1200);
+    padding-bottom: px-to-rem($spacing-1200);
   }
 
   &__image {
-    border-radius: Function.px-to-rem(Variable.$radius-16);
+    border-radius: px-to-rem($radius-16);
     overflow: hidden;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
-    gap: Function.px-to-rem(Variable.$spacing-300);
+    gap: px-to-rem($spacing-300);
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    gap: Function.px-to-rem(Variable.$spacing-150);
+    gap: px-to-rem($spacing-150);
   }
 
   &__content {
     display: flex;
-    gap: Function.px-to-rem(Variable.$spacing-600);
+    gap: px-to-rem($spacing-600);
 
     &--bottom {
       flex-direction: column;
@@ -59,11 +61,11 @@
   }
 
   &--cta {
-    border-radius: Function.px-to-rem(Variable.$radius-16);
+    border-radius: px-to-rem($radius-16);
 
     // Background dummies
     background: url("../../assets/images/pattern-fork.svg") no-repeat -10% 230%,
       url("../../assets/images/pattern-knife.svg") no-repeat 110% top,
-      Variable.$color-neutral-200;
+      $color-neutral-200;
   }
 }

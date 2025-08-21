@@ -1,0 +1,35 @@
+/*
+*
+* Breadcrumb navigation
+*
+*/
+@use "../abstracts" as *;
+.breadcrumb {
+  margin-bottom: px-to-rem($spacing-200);
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: px-to-rem($spacing-075);
+
+      &::after {
+        color: $color-primary;
+        content: "/";
+        margin-left: px-to-rem($spacing-075);
+      }
+    }
+  }
+
+  &__link {
+    color: rgba($color-primary, 0.6);
+    text-decoration: none;
+
+    &--active {
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/*
+*
+* Recipe 
+*
+*/
+@use "../abstracts" as *;
+.recipe {
+  display: flex;
+  gap: px-to-rem($spacing-500);
+  align-items: start;
+
+  &__img {
+    border-radius: px-to-rem($radius-16);
+    overflow: hidden;
+    flex: 0 1 55%;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem($spacing-250);
+  }
+
+  &__ingredients,
+  &__instructions {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem($spacing-200);
+  }
+}

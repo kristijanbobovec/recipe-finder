@@ -3,14 +3,12 @@
 * Button
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .btn {
-  color: Variable.$color-white;
-  background-color: Variable.$btn-primary;
-  transition: Variable.$transition-duration ease;
-  border-radius: Function.px-to-rem(Variable.$radius-10);
+  color: $color-white;
+  background-color: $btn-primary;
+  transition: $transition-duration ease;
+  border-radius: px-to-rem($radius-10);
   cursor: pointer;
   border: none;
 
@@ -19,20 +17,26 @@
     text-decoration: none;
   }
 
+  &--xl {
+    text-align: center;
+    border-radius: $radius-999;
+    padding: px-to-rem(12px) px-to-rem(32px);
+  }
+
   &--xs {
-    padding: Function.px-to-rem(12px) Function.px-to-rem(16px);
+    padding: px-to-rem(12px) px-to-rem(16px);
   }
 
   &--s {
-    padding: Function.px-to-rem(16px) Function.px-to-rem(24px);
+    padding: px-to-rem(16px) px-to-rem(24px);
   }
 
   &--m {
-    padding: Function.px-to-rem(16px) Function.px-to-rem(32px);
+    padding: px-to-rem(16px) px-to-rem(32px);
   }
 
   &:hover {
-    background-color: Variable.$btn-hover;
+    background-color: $btn-hover;
   }
 
   &:focus {
@@ -40,6 +44,6 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px Variable.$background, 0 0 0 5px Variable.$btn-primary;
+    box-shadow: $box-shadow-btn;
   }
 }

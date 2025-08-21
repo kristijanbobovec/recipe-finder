@@ -3,21 +3,35 @@
 * List
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: Variable.$spacing-600;
+  gap: px-to-rem($spacing-600);
 
-  margin-left: Function.px-to-rem(50px);
+  margin-left: px-to-rem(50px);
+
+  &--sm {
+    gap: px-to-rem($spacing-100);
+    margin-left: px-to-rem(35px);
+
+    .list__item {
+      & > :first-child {
+        &::before {
+          width: px-to-rem(24px);
+          height: px-to-rem(24px);
+          left: px-to-rem(35px) * -1;
+          top: 3px;
+        }
+      }
+    }
+  }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: Variable.$spacing-150;
+    gap: $spacing-150;
 
     & > :first-child {
       position: relative;
@@ -25,13 +39,12 @@
       &::before {
         content: "";
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: Function.px-to-rem(50px) * -1;
+        left: px-to-rem(50px) * -1;
         background: url("../../assets/images/icon-bullet-point.svg") no-repeat
-          center;
-        width: Function.px-to-rem(32px);
-        height: Function.px-to-rem(32px);
+          top;
+        background-size: contain;
+        width: px-to-rem(32px);
+        height: px-to-rem(32px);
       }
     }
   }

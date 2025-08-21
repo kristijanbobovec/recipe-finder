@@ -3,10 +3,10 @@
 * Base
 *
 */
-@use "../abstracts/variables" as Variable;
+@use "../abstracts" as *;
 
 body {
-  background-color: Variable.$background;
+  background-color: $background;
 }
 
 // CSS Reset by Josh Comeau
@@ -67,4 +67,14 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

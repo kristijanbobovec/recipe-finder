@@ -3,11 +3,9 @@
 * Layout
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .container {
-  max-width: Function.px-to-rem(Variable.$container-max-width);
+  max-width: px-to-rem($container-max-width);
   width: 100%;
   margin: 0 auto;
 }

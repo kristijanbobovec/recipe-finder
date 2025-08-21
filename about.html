@@ -33,7 +33,12 @@
             <a href="index.html" class="nav__link text-preset-7">Home</a>
           </li>
           <li class="nav__item">
-            <a href="about.html" class="nav__link text-preset-7">About</a>
+            <a
+              href="about.html"
+              class="nav__link text-preset-7"
+              aria-current="page"
+              >About</a
+            >
           </li>
           <li class="nav__item">
             <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
@@ -43,12 +48,12 @@
         <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
       </nav>
 
-      <section class="hero hero--about" aria-label="Hero section">
+      <section class="hero hero--about" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero__content">
             <div class="hero__main">
               <div class="badge text-preset-5">Our mission</div>
-              <h1 class="text-preset-2">
+              <h1 class="text-preset-2" id="hero-title">
                 Help more people cook nourishing meals, more often.
               </h1>
               <div class="hero__text">
@@ -195,7 +200,7 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <p class="footer_text">Made with ❤️ and 🥑</p>
         <nav class="footer-nav" aria-label="Social network links">
           <ul class="footer-nav__list">
             <li class="footer-nav__item">

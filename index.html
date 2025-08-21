@@ -20,6 +20,7 @@
     <script type="module" src="./src/js/main.js"></script>
   </head>
   <body>
+    <!-- S -->
     <header class="header">
       <nav class="nav" aria-label="Main navigation">
         <a href="#" class="nav__logo">
@@ -30,7 +31,12 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="index.html" class="nav__link text-preset-7">Home</a>
+            <a
+              href="index.html"
+              class="nav__link text-preset-7"
+              aria-current="page"
+              >Home</a
+            >
           </li>
           <li class="nav__item">
             <a href="about.html" class="nav__link text-preset-7">About</a>
@@ -43,11 +49,11 @@
         <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
       </nav>
 
-      <section class="hero hero--home" aria-label="Hero section">
+      <section class="hero hero--home" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero__content">
             <div class="hero__header">
-              <h1 class="text-preset-1">
+              <h1 class="text-preset-1" id="hero-title">
                 <span class="u-underline">Healthy</span> meals, zero fuss
               </h1>
               <p class="u-max-chars-40 u-text-center">
@@ -161,7 +167,7 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <p class="footer_text">Made with ❤️ and 🥑</p>
         <nav class="footer-nav" aria-label="Social network links">
           <ul class="footer-nav__list">
             <li class="footer-nav__item">

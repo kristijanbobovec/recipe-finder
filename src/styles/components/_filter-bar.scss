@@ -3,16 +3,14 @@
 * Filter-bar
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .filter-bar {
   display: flex;
   justify-content: space-between;
 
   &__filters {
     display: flex;
-    gap: Function.px-to-rem(Variable.$spacing-200);
+    gap: px-to-rem($spacing-200);
   }
 
   &__group {

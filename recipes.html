@@ -36,18 +36,23 @@
             <a href="about.html" class="nav__link text-preset-7">About</a>
           </li>
           <li class="nav__item">
-            <a href="recipes.html" class="nav__link text-preset-7">Recipes</a>
+            <a
+              href="recipes.html"
+              class="nav__link text-preset-7"
+              aria-current="page"
+              >Recipes</a
+            >
           </li>
         </ul>
 
         <a href="#" class="btn btn--xs text-preset-5">Browse recipes</a>
       </nav>
 
-      <section class="hero hero--recipes" aria-label="Hero section">
+      <section class="hero hero--recipes" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero__content">
             <div class="hero__main">
-              <h1 class="text-preset-2 u-text-center">
+              <h1 class="text-preset-2 u-text-center" id="hero-title">
                 Explore our simple, healthy recipes
               </h1>
               <p class="u-max-chars-60 u-text-center">
@@ -63,18 +68,23 @@
     </header>
 
     <main class="container">
-      <section class="section section--bottom-padding" aria-label="Recipe list">
+      <section class="section section--bottom-padding">
         <form action="" class="filter-bar">
           <div class="filter-bar__filters">
             <div class="filter-bar__group">
-              <button class="form-button text-preset-7" type="button">
+              <button
+                class="form-button text-preset-7"
+                type="button"
+                aria-expanded="false"
+                aria-controls="form-menu--1"
+              >
                 Max Prep Time
                 <svg class="form-button__icon">
                   <use href="./src/assets/images/icon-chevron-down.svg"></use>
                 </svg>
               </button>
 
-              <ul class="form-menu">
+              <ul class="form-menu form-menu--active" id="form-menu--1">
                 <li class="form-menu__item">
                   <label class="form-menu__label text-preset-7"
                     ><input
@@ -90,8 +100,8 @@
                     ><input
                       type="radio"
                       name="prep-time"
-                      value="5"
                       class="form-menu__input"
+                      value="5"
                     />5 minutes</label
                   >
                 </li>
@@ -100,29 +110,9 @@
                     ><input
                       type="radio"
                       name="prep-time"
+                      class="form-menu__input"
                       value="10"
-                      class="form-menu__input"
                     />10 minutes</label
-                  >
-                </li>
-                <li class="form-menu__item">
-                  <label class="form-menu__label text-preset-7"
-                    ><input
-                      type="radio"
-                      name="prep-time"
-                      value="15"
-                      class="form-menu__input"
-                    />15 minutes</label
-                  >
-                </li>
-                <li class="form-menu__item">
-                  <label class="form-menu__label text-preset-7"
-                    ><input
-                      type="radio"
-                      name="prep-time"
-                      value="20"
-                      class="form-menu__input"
-                    />20 minutes</label
                   >
                 </li>
                 <li class="form-menu__item">
@@ -131,31 +121,147 @@
               </ul>
             </div>
 
-            <button class="form-button text-preset-7" type="button">
-              Max Cook Time
-              <svg class="form-button__icon">
-                <use href="./src/assets/images/icon-chevron-down.svg"></use>
-              </svg>
-            </button>
+            <div class="filter-bar__group">
+              <button
+                class="form-button text-preset-7"
+                type="button"
+                aria-expanded="false"
+                aria-controls="form-menu--2"
+              >
+                Max Cook Time
+                <svg class="form-button__icon">
+                  <use href="./src/assets/images/icon-chevron-down.svg"></use>
+                </svg>
+              </button>
+
+              <ul class="form-menu" id="form-menu--2">
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="cook-time"
+                      class="form-menu__input"
+                      value="0"
+                    />0 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="cook-time"
+                      class="form-menu__input"
+                      value="5"
+                    />5 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="cook-time"
+                      class="form-menu__input"
+                      value="10"
+                    />10 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="cook-time"
+                      class="form-menu__input"
+                      value="15"
+                    />15 minutes</label
+                  >
+                </li>
+                <li class="form-menu__item">
+                  <label class="form-menu__label text-preset-7"
+                    ><input
+                      type="radio"
+                      name="cook-time"
+                      class="form-menu__input"
+                      value="20"
+                    />20 minutes</label
+                  >
+                </li>
+
+                <li class="form-menu__item">
+                  <button class="text-preset-9 form-menu__clear">Clear</button>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="from-search">
-            <button class="from-search__submit" type="submit">a</button>
+          <div class="form-search text-preset-7">
+            <label for="recipe" class="form-search__label"></label>
+            <button
+              class="form-search__submit"
+              type="submit"
+              aria-label="Search recipes"
+            >
+              <svg class="form-search__icon">
+                <use href="./src/assets/images/icon-search.svg"></use>
+              </svg>
+            </button>
             <input
               type="text"
-              name=""
-              id=""
-              class="from-search__input"
-              placeholder="Search by name or ingredient"
+              name="recipe"
+              id="recipe"
+              class="form-search__input"
+              placeholder="Search by name or ingredient..."
+              aria-label="Search recipes by name or ingredient"
             />
           </div>
         </form>
+
+        <div class="recipes">
+          <article class="recipes__item">
+            <header class="recipes__header">
+              <img
+                src="./src/assets/images/mediterranean-chickpea-salad-small.webp"
+                alt="Mediterranean Chickpea Salad"
+                class="recipes__img"
+              />
+              <div class="recipes__info">
+                <div class="recipes__description">
+                  <h2 class="text-preset-5">Mediterranean Chickpea Salad</h2>
+                  <p class="text-preset-9">
+                    A refreshing, protein-packed salad tossed in a lemon-olive
+                    oil dressing.
+                  </p>
+                </div>
+                <div class="recipes__details">
+                  <div class="recipes__detail">
+                    <svg class="recipes__icon">
+                      <use href="./src/assets/images/icon-servings.svg"></use>
+                    </svg>
+                    <span class="text-preset-9">Servings: 2</span>
+                  </div>
+                  <div class="recipes__detail">
+                    <svg class="recipes__icon">
+                      <use href="./src/assets/images/icon-prep-time.svg"></use>
+                    </svg>
+                    <span class="text-preset-9">Prep: 10 mins</span>
+                  </div>
+                  <div class="recipes__detail">
+                    <svg class="recipes__icon">
+                      <use href="./src/assets/images/icon-cook-time.svg"></use>
+                    </svg>
+                    <span class="text-preset-9">Cook: 0 min</span>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <a href="" class="btn btn--xl text-preset-8">View Recipe</a>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <div class="footer_text">Made with ❤️ and 🥑</div>
+        <p class="footer_text">Made with ❤️ and 🥑</p>
         <nav class="footer-nav" aria-label="Social network links">
           <ul class="footer-nav__list">
             <li class="footer-nav__item">

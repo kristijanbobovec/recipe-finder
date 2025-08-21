@@ -6,30 +6,16 @@
 */
 
 // Base imports
-@use "./base/base";
-@use "./base/typography";
-
-// Utilities imports
-@use "./utilities/utilities";
+@use "./base";
 
 // Layout imports
-@use "./layout/layout";
-@use "./layout/sections";
-@use "./layout/footer";
+@use "./layout";
 
 // Components imports
-@use "./components/navigation";
-@use "./components/footer-navigation";
-@use "./components/hero";
-@use "./components/button";
-@use "./components/badge";
-@use "./components/features";
-@use "./components/list";
-@use "./components/filter-bar";
-@use "./components/form-button";
-@use "./components/form-menu";
+@use "./components";
 
 // Pages imports
-@use "./pages/home";
-@use "./pages/about";
-@use "./pages/recipes";
+@use "./pages";
+
+// Utilities imports
+@use "./utilities";

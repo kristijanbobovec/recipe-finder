@@ -3,8 +3,8 @@
 * Functions
 *
 */
-@use "./variables" as Variables;
+@use "./variables" as *;
 
-@function px-to-rem($px, $base: Variables.$font-size-base) {
+@function px-to-rem($px, $base: $font-size-base) {
   @return calc($px / $base) * 1rem;
 }

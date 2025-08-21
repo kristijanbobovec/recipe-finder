@@ -3,28 +3,26 @@
 * Form-button
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .form-button {
   display: flex;
   align-items: center;
-  gap: Function.px-to-rem(Variable.$spacing-100);
+  gap: px-to-rem($spacing-100);
 
   cursor: pointer;
 
-  background: Variable.$color-white;
+  background: $color-white;
 
-  border-radius: Function.px-to-rem(Variable.$radius-10);
-  padding: Function.px-to-rem(10px) Function.px-to-rem(16px);
+  border-radius: px-to-rem($radius-10);
+  padding: px-to-rem(10px) px-to-rem(16px);
 
-  border: 1px solid Variable.$color-neutral-300;
+  border: 1px solid $color-neutral-300;
 
-  transition: all Variable.$transition-duration ease;
+  transition: all $transition-duration ease;
 
   &--selected,
   &:hover {
-    border: 1px solid Variable.$color-primary;
+    border: 1px solid $color-primary;
   }
 
   &:focus {
@@ -32,8 +30,8 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px Variable.$background, 0 0 0 4px Variable.$btn-primary;
-    border: 1px solid Variable.$color-neutral-300;
+    box-shadow: $box-shadow-focus;
+    border: 1px solid $color-neutral-300;
   }
 
   &__icon {

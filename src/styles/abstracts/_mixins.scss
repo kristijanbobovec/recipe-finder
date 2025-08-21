@@ -1,0 +1,12 @@
+/*
+*
+* Mixins 
+*
+*/
+@use "./variables" as *;
+
+@mixin breakpoint($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

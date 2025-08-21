@@ -3,9 +3,7 @@
 * Hero
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .hero {
-  padding-top: Function.px-to-rem(Variable.$spacing-1000);
+  padding-top: px-to-rem($spacing-1000);
 }

@@ -75,9 +75,12 @@ $spacing-600: 48px;
 $spacing-500: 40px;
 $spacing-400: 32px;
 $spacing-300: 24px;
+$spacing-250: 20px;
 $spacing-200: 16px;
 $spacing-150: 12px;
+$spacing-125: 10px;
 $spacing-100: 8px;
+$spacing-075: 6px;
 $spacing-025: 2px;
 
 // === Container max width ===
@@ -86,3 +89,20 @@ $container-max-width: 1192px;
 // === Icons Size ====
 $icon-width: 60px;
 $icon-height: 60px;
+
+// === Box shadows ===
+$box-shadow-btn: 0 0 0 3px $background, 0 0 0 5px $btn-primary;
+$box-shadow-icon: 0 1px 0 0 $color-neutral-200;
+$box-shadow-focus: 0 0 0 2px $background, 0 0 0 4px $btn-primary;
+$box-shadow-radio-focus: 0 0 0 4px $color-neutral-200;
+$box-shadow-radio-input: 0 1px 2px 0 rgba($color-primary, 0.12);
+$box-shadow-hero-img: 0 0 0 12px $color-white;
+
+// === Breakpoints ===
+// 375px, 700px, 900px, 1440px
+$breakpoints: (
+  "sm": 23.4375em,
+  "md": 43.75em,
+  "lg": 56.24em,
+  "xlg": 90em,
+);

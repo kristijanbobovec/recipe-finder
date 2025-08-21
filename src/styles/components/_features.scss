@@ -3,13 +3,11 @@
 * Features 
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .features {
   width: 100%;
   display: flex;
-  gap: Function.px-to-rem(Variable.$spacing-400);
+  gap: px-to-rem($spacing-400);
   flex-wrap: wrap;
 
   &__item {
@@ -17,23 +15,23 @@
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: Function.px-to-rem(Variable.$spacing-300);
+    gap: px-to-rem($spacing-300);
   }
 
   &__icon {
     display: grid;
     place-items: center;
-    width: Function.px-to-rem(Variable.$icon-width);
-    height: Function.px-to-rem(Variable.$icon-height);
-    background-color: Variable.$color-white;
-    border-radius: Function.px-to-rem(Variable.$radius-12);
-    border: 1px solid Variable.$color-neutral-200;
-    box-shadow: 0 1px 0 0 Variable.$color-neutral-200;
+    width: px-to-rem($icon-width);
+    height: px-to-rem($icon-height);
+    background-color: $color-white;
+    border-radius: px-to-rem($radius-12);
+    border: 1px solid $color-neutral-200;
+    box-shadow: $box-shadow-icon;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
-    gap: Function.px-to-rem(Variable.$spacing-150);
+    gap: px-to-rem($spacing-150);
   }
 }

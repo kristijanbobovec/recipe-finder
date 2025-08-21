@@ -3,9 +3,7 @@
 * Utilities
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .u-text-center {
   text-align: center;
 }
@@ -17,11 +15,11 @@
     position: absolute;
     width: 100%;
     height: 35%;
-    background-color: Variable.$color-secondary;
+    background-color: $color-secondary;
     z-index: -1;
     bottom: 10%;
     opacity: 0.5;
-    border-radius: Variable.$radius-4;
+    border-radius: $radius-4;
   }
   &--solid {
     &::before {
@@ -46,5 +44,5 @@
 }
 
 .u-section-divider {
-  border-bottom: 1px solid Variable.$color-neutral-300;
+  border-bottom: 1px solid $color-neutral-300;
 }

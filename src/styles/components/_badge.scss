@@ -3,11 +3,9 @@
 * Badge
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .badge {
-  background-color: Variable.$color-secondary;
-  border-radius: Variable.$radius-6;
-  padding: Function.px-to-rem(2px) Function.px-to-rem(6px);
+  background-color: $color-secondary;
+  border-radius: $radius-6;
+  padding: px-to-rem(2px) px-to-rem(6px);
 }

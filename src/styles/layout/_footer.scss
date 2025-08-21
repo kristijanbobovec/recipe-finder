@@ -3,11 +3,9 @@
 * Footer
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .footer {
-  padding: Function.px-to-rem(Variable.$spacing-500);
+  padding: px-to-rem($spacing-500);
   .container {
     display: flex;
     justify-content: space-between;

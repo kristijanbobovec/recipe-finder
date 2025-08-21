@@ -3,36 +3,34 @@
 * About Page
 *
 */
-@use "../abstracts/functions" as Function;
-@use "../abstracts/variables" as Variable;
-
+@use "../abstracts" as *;
 .hero--about {
-  border-bottom: 1px solid Variable.$color-neutral-300;
-  padding-bottom: Variable.$spacing-1200;
+  border-bottom: 1px solid $color-neutral-300;
+  padding-bottom: $spacing-1200;
   .hero__content {
     display: flex;
     align-items: center;
-    gap: Variable.$spacing-800;
+    gap: $spacing-800;
   }
 
   .hero__main {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: Variable.$spacing-300;
+    gap: $spacing-300;
     flex: 0 1 45%;
   }
 
   .hero__text {
     display: flex;
     flex-direction: column;
-    gap: Variable.$spacing-200;
+    gap: $spacing-200;
   }
 
   .hero__image {
     flex: 1;
     img {
-      border-radius: Variable.$radius-10;
+      border-radius: $radius-10;
     }
 
     position: relative;
