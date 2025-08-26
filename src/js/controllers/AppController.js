@@ -4,9 +4,15 @@ import FooterView from "../views/FooterView";
 import NavigationView from "../views/NavigationView";
 import HeroView from "../views/HeroView";
 
-const controllRoutes = function () {
+const setPage = function () {
   const newPage = Router.handleRoute();
   Model.updateCurrentPage(newPage);
+};
+
+const controllRoutes = function () {
+  /* Checks and sets the current page */
+  setPage();
+
   NavigationView.update({ currentPage: Model.state.currentPage });
   HeroView.render({
     data: { currentPage: Model.state.currentPage },
@@ -15,18 +21,19 @@ const controllRoutes = function () {
 };
 
 const appController = async function () {
-  /* First call on init app */
-  const page = Router.handleRoute();
-  Model.updateCurrentPage(page);
+  /* Checks and sets the current page */
+  setPage();
 
-  // Render all things that pages have in common
-  // Render Navigation
+  // Render all common elements on page.
+  // Render navigation
   NavigationView.render({ data: { currentPage: Model.state.currentPage } });
-  // Hero View
+
+  // Render navigation
   HeroView.render({
     data: { currentPage: Model.state.currentPage },
     hero: true,
   });
+
   // Render Footer
   FooterView.render();
 
