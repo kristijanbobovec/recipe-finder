@@ -9,7 +9,7 @@ const setPage = function () {
   Model.updateCurrentPage(newPage);
 };
 
-const controllRoutes = function () {
+const controlRoutes = function () {
   /* Checks and sets the current page */
   setPage();
 
@@ -38,8 +38,8 @@ const appController = async function () {
   FooterView.render();
 
   /* This will add hanlder to routes. */
-  /* And automatically on handle route change view */
-  Router.addHandlerRoute(controllRoutes);
+  /* And automatically handle route change view */
+  Router.subscribeHandlerRoute(controlRoutes);
 };
 
 export default appController;

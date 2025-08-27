@@ -54,7 +54,7 @@ class RecipesView extends View {
                   >
                 </li>
                 <li class="form-menu__item">
-                  <button class="text-preset-9 form-menu__clear">Clear</button>
+                  <button type="button" class="text-preset-9 form-menu__clear">Clear</button>
                 </li>
               </ul>
             </div>
@@ -125,7 +125,7 @@ class RecipesView extends View {
                 </li>
 
                 <li class="form-menu__item">
-                  <button class="text-preset-9 form-menu__clear">Clear</button>
+                  <button type="button" class="text-preset-9 form-menu__clear">Clear</button>
                 </li>
               </ul>
             </div>

@@ -12,15 +12,15 @@ export default class View {
     // Set data
     this._data = data;
 
+    // If parent
+    if (parentEl) this._parentEl = parentEl;
+
     // Load markup
     const markup = this._generateMarkup();
     if (!render) return markup;
 
     // If hero
     if (hero) this._updateHeroClass();
-
-    // If parent
-    if (parentEl) this._parentEl = parentEl;
 
     // Clear old markup
     this._clear();

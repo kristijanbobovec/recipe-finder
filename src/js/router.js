@@ -26,7 +26,7 @@ class Router {
     return this._routes[this._hash] ? this._hash : "";
   }
 
-  addHandlerRoute(handler) {
+  subscribeHandlerRoute(handler) {
     window.addEventListener("hashchange", function (e) {
       handler(e);
     });
