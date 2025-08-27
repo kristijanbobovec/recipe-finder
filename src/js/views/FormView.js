@@ -3,9 +3,11 @@ import View from "./View";
 class FormView extends View {
   _menus;
   _handler;
+  _btns;
 
   init() {
     this._menus = this._parentEl.querySelectorAll(".form-menu");
+    this._btns = this._parentEl.querySelectorAll(".form-button");
     this._addHandlerToggleDropdown();
     this._addHandlerCloseDropdown();
     this._addClearHandler();
@@ -32,7 +34,6 @@ class FormView extends View {
       e.preventDefault();
 
       // Get form data and set that to RecipesController
-      console.log("krac");
       this._sendDataToController();
     });
   }
@@ -69,8 +70,10 @@ class FormView extends View {
           [...this._menus].some((menu) =>
             menu.classList.contains("form-menu--active")
           )
-        )
+        ) {
           this._closeMenus();
+          this._removeAriaExpanded(); // set aria expanded attribute for all buttons to false
+        }
       }
     });
 
@@ -80,6 +83,7 @@ class FormView extends View {
 
       if (!menu && !btn) {
         this._closeMenus();
+        this._removeAriaExpanded(); // set aria expanded attribute for all buttons to false
       }
     });
   }
@@ -91,13 +95,27 @@ class FormView extends View {
     });
   }
 
-  _toggleMenu(btn = "") {
-    if (!btn) return;
+  _removeAriaExpanded(noAriaRemove = "") {
+    this._btns.forEach((btn) => {
+      // noAriaRemove -- on which button not to remove aria
+      if (noAriaRemove === btn) return;
+      btn.setAttribute("aria-expanded", false);
+    });
+  }
+
+  _toggleMenu(btn) {
     const menuToOpen = this._parentEl.querySelector(
       `#${btn.getAttribute("aria-controls")}`
     );
-    this._closeMenus(menuToOpen);
+    this._closeMenus(menuToOpen); // pasing menu which we will not close
+    this._removeAriaExpanded(btn); // passing btn on which we not remove aria expanded
     menuToOpen.classList.toggle("form-menu--active");
+
+    // toggle aria-expanded
+    btn.setAttribute(
+      "aria-expanded",
+      'btn.getAttribute("aria-expanded") === "false" ? "true" : "false"'
+    );
   }
 
   _generateMarkup() {}

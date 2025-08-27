@@ -17,14 +17,14 @@ class NavigationView extends View {
   }
 
   _addHandlerHideNavigation() {
-    window.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", (e) => {
       if (!this._parentEl.classList.contains("nav__list--active")) return;
       if (e.code === "Escape") {
         this.toggleNavigation();
       }
     });
 
-    window.addEventListener("pointerdown", (e) => {
+    document.addEventListener("pointerdown", (e) => {
       if (!this._parentEl.classList.contains("nav__list--active")) return;
       const navMenu = e.target.closest(".nav__list");
       const navButton = e.target.closest(".nav__hamburger");
@@ -64,11 +64,13 @@ class NavigationView extends View {
     const markup = PAGES.map(
       (page) => `
       <li class="nav__item">
-        <a href="#${page.link}" data-updatable class="nav__link text-preset-7 ${
-        this._data.currentPage === page.link ? "nav__link--active" : ""
-      }" ${this._data.currentPage === page.link ? 'aria-current="page"' : ""}>${
-        page.label
-      }</a>
+        <a href="#${
+          page.link[0]
+        }" data-updatable class="nav__link text-preset-7 ${
+        page.link.includes(this._data.currentPage) ? "nav__link--active" : ""
+      }" ${
+        page.link.includes(this._data.currentPage) ? 'aria-current="page"' : ""
+      }>${page.label}</a>
       </li>`
     ).join("");
 

@@ -4,7 +4,9 @@ import RecipesListView from "../views/RecipesListView";
 import FormView from "../views/FormView";
 
 const controlForm = function (data) {
-  console.log(data);
+  Model.filterRecipes(data);
+
+  RecipesListView.render({ data: Model.state.filter.results });
 };
 
 const recipesController = async function () {
@@ -15,6 +17,10 @@ const recipesController = async function () {
     });
     RecipesListView.render({ data: Model.state.recipes, parentEl: recipes });
     FormView.render({ parentEl: filterBar, render: false });
+
+    /* Init all hanlders because this needs to be called after parent element is set.
+    Because of setting parent element in render method this needs to be called after render method.
+     */
     FormView.init();
 
     /* Subscribing handler function to FormView to establish communication between model and controller */

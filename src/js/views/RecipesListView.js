@@ -54,7 +54,9 @@ class RecipesListView extends View {
                 </div>
               </div>
             </header>
-            <a href="" class="btn btn--xl text-preset-8">View Recipe</a>
+            <a href="#recipe/${
+              recipe.id
+            }" class="btn btn--xl text-preset-8">View Recipe</a>
         </article>`
       )
       .join("");

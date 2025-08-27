@@ -10,6 +10,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(px-to-rem(300px), 1fr));
   gap: px-to-rem($spacing-400);
+
   @include breakpoint(md-lg) {
     grid-template-columns: 1fr;
   }

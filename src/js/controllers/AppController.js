@@ -10,6 +10,7 @@ const setPage = function () {
 };
 
 const controlRoutes = function () {
+  window.scrollTo({ top: 0 });
   /* Checks and sets the current page */
   setPage();
 
