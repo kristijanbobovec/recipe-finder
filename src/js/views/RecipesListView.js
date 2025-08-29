@@ -18,14 +18,14 @@ class RecipesListView extends View {
             <header class="recipes__header">
               <div class="recipes__img skeleton">
                 <picture class="lazy-load">
-                  <source data-srcset="${getImageFolder()}/${
+                  <source data-srcset="${getImageFolder()}${
             recipe.image.small.split("/")[3]
           }">
 
                   <img
-                    src="${getImageFolder()}/placeholder-image-rectangle.webp"
+                    src="${getImageFolder()}placeholder-image-rectangle.webp"
                     alt="Hero image"
-                    data-src="${getImageFolder()}/${
+                    data-src="${getImageFolder()}${
             recipe.image.small.split("/")[3]
           }"
                     class="u-responsive-img"

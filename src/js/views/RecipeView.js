@@ -23,17 +23,17 @@ class RecipeView extends View {
         <div class="recipe" aria-labelledby="recipe-title">
           <div class="recipe__img skeleton">
             <picture class="lazy-load">
-              <source media="(min-width: 701px)" data-srcset="${getImageFolder()}/${
+              <source media="(min-width: 701px)" data-srcset="${getImageFolder()}${
       this._data.image.large.split("/")[3]
     }">
-              <source media="(max-width: 700px)" data-srcset="${getImageFolder()}/${
+              <source media="(max-width: 700px)" data-srcset="${getImageFolder()}${
       this._data.image.small.split("/")[3]
     }">
 
               <img
-                src="${getImageFolder()}/placeholder-image-rectangle.webp"
+                src="${getImageFolder()}placeholder-image-rectangle.webp"
                 alt="Hero image"
-                data-src="${getImageFolder()}/${
+                data-src="${getImageFolder()}${
       this._data.image.small.split("/")[3]
     }"
                 class="u-responsive-img"

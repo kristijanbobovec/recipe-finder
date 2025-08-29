@@ -15,7 +15,7 @@ class HomeView extends View {
               <div class="features__icon">
                 <img
                   class="features__img"
-                  src="${getImageFolder()}/icon-whole-food-recipes.svg"
+                  src="${getImageFolder()}icon-whole-food-recipes.svg"
                   alt="Whole-food recipes"
                 />
               </div>
@@ -28,7 +28,7 @@ class HomeView extends View {
               <div class="features__icon">
                 <img
                   class="features__img"
-                  src="${getImageFolder()}/icon-minimum-fuss.svg"
+                  src="${getImageFolder()}icon-minimum-fuss.svg"
                   alt="Minimum fuss"
                 />
               </div>
@@ -44,7 +44,7 @@ class HomeView extends View {
               <div class="features__icon">
                 <img
                   class="features__img"
-                  src="${getImageFolder()}/icon-search-in-seconds.svg"
+                  src="${getImageFolder()}icon-search-in-seconds.svg"
                   alt="Search in seconds"
                 />
               </div>
@@ -79,13 +79,13 @@ class HomeView extends View {
           </div>
           <div class="section__image skeleton">
             <picture class="lazy-load">
-              <source media="(min-width: 701px)" data-srcset="${getImageFolder()}/image-home-real-life-large.webp">
-              <source media="(max-width: 700px)" data-srcset="${getImageFolder()}/image-home-real-life-small.webp">
+              <source media="(min-width: 701px)" data-srcset="${getImageFolder()}image-home-real-life-large.webp">
+              <source media="(max-width: 700px)" data-srcset="${getImageFolder()}image-home-real-life-small.webp">
 
               <img
-                src="${getImageFolder()}/placeholder-image-rectangle.webp"
+                src="${getImageFolder()}placeholder-image-rectangle.webp"
                 alt="Hero image"
-                data-src="${getImageFolder()}/image-home-real-life-small.webp"
+                data-src="${getImageFolder()}image-home-real-life-small.webp"
                 class="u-responsive-img"
               />
             </picture>
