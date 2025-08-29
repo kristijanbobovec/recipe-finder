@@ -1,5 +1,5 @@
 import View from "./View";
-import { getImageFolder } from "../helpers";
+import { getImage } from "../helpers";
 
 class RecipesListView extends View {
   _error = "No recipes found.";
@@ -18,16 +18,14 @@ class RecipesListView extends View {
             <header class="recipes__header">
               <div class="recipes__img skeleton">
                 <picture class="lazy-load">
-                  <source data-srcset="${getImageFolder()}${
-            recipe.image.small.split("/")[3]
-          }">
+                  <source data-srcset="${getImage(
+                    recipe.image.small.split("/")[3]
+                  )}">
 
                   <img
-                    src="${getImageFolder()}placeholder-image-rectangle.webp"
+                    src="${getImage()}placeholder-image-rectangle.webp"
                     alt="Hero image"
-                    data-src="${getImageFolder()}${
-            recipe.image.small.split("/")[3]
-          }"
+                    data-src="${getImage(recipe.image.small.split("/")[3])}"
                     class="u-responsive-img"
                   />
                 </picture>

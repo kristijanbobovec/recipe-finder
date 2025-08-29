@@ -1,6 +1,6 @@
 import View from "./View";
 import CtaView from "./CtaView";
-import { getImageFolder } from "../helpers";
+import { getImage } from "../helpers";
 
 class AboutView extends View {
   _parentEl = document.querySelector("main.container");
@@ -105,13 +105,19 @@ class AboutView extends View {
           </div>
           <div class="section__image skeleton">
             <picture class="lazy-load">
-              <source media="(min-width: 701px)" data-srcset="${getImageFolder()}image-about-beyond-the-plate-large.webp">
-              <source media="(max-width: 700px)" data-srcset="${getImageFolder()}image-about-beyond-the-plate-small.webp">
+              <source media="(min-width: 701px)" data-srcset="${getImage(
+                "image-about-beyond-the-plate-large.webp"
+              )}">
+              <source media="(max-width: 700px)" data-srcset="${getImage(
+                "image-about-beyond-the-plate-small.webp"
+              )}">
 
               <img
-                src="${getImageFolder()}placeholder-image-rectangle.webp"
+                src="${getImage("placeholder-image-rectangle.webp")}"
                 alt="Hero image"
-                data-src="${getImageFolder()}image-about-beyond-the-plate-small.webp"
+                data-src="${getImage(
+                  "image-about-beyond-the-plate-small.webp"
+                )}"
                 class="u-responsive-img"
               />
             </picture>

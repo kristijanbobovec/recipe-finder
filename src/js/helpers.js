@@ -28,6 +28,6 @@ export const getJSON = async function (url) {
   }
 };
 
-export const getImageFolder = function () {
-  return new URL(`../assets/images/`, import.meta.url).href;
+export const getImage = function (name) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href;
 };
