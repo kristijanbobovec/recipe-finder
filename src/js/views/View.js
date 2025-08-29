@@ -101,8 +101,6 @@ export default class View {
 
   _loadImage(entries, observer) {
     entries.forEach((entry) => {
-      console.log(entry);
-
       if (entry.isIntersecting) {
         const picture = entry.target;
 
@@ -131,7 +129,9 @@ export default class View {
   _lazyLoadImages() {
     const imagesToLoad = this._parentEl.querySelectorAll(".lazy-load");
 
-    const lazyLoadObserver = new IntersectionObserver(this._loadImage, {});
+    const lazyLoadObserver = new IntersectionObserver(this._loadImage, {
+      rootMargin: "100px",
+    });
 
     // Observe all images
     imagesToLoad.forEach((img) => lazyLoadObserver.observe(img));
