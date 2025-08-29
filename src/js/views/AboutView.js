@@ -102,11 +102,18 @@ class AboutView extends View {
               </ul>
             </div>
           </div>
-          <div class="section__image">
-            <img
-              src="./src/assets/images/image-about-beyond-the-plate-large.webp"
-              alt="Beyond the plate"
-            />
+          <div class="section__image skeleton">
+            <picture class="lazy-load">
+              <source media="(min-width: 701px)" data-srcset="./src/assets/images/image-about-beyond-the-plate-large.webp">
+              <source media="(max-width: 700px)" data-srcset="./src/assets/images/image-about-beyond-the-plate-small.webp">
+
+              <img
+                src="./src/assets/images/placeholder-image-rectangle.webp"
+                alt="Hero image"
+                data-src="./src/assets/images/image-about-beyond-the-plate-small.webp"
+                class="u-responsive-img"
+              />
+            </picture>
           </div>
         </div>
       </section>

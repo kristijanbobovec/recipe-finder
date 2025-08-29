@@ -9,6 +9,10 @@ body {
   background-color: $background;
 }
 
+body:has(.loader--active) {
+  overflow: hidden;
+}
+
 // CSS Reset by Josh Comeau
 *,
 *::before,
@@ -77,4 +81,12 @@ h6 {
   clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.lazy-load {
+  opacity: 0;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
 }

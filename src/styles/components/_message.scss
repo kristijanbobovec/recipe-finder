@@ -1,0 +1,24 @@
+/*
+*
+* Message 
+*
+*/
+@use "../abstracts" as *;
+.message {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+  display: flex;
+  padding: px-to-rem(16px) 0;
+  align-items: center;
+
+  gap: px-to-rem(8px);
+
+  &--error {
+    color: $color-secondary;
+  }
+
+  &__icon {
+    width: px-to-rem(32px);
+    aspect-ratio: 1 / 1;
+  }
+}

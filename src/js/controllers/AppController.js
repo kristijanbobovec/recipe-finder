@@ -3,6 +3,7 @@ import Router from "../router";
 import FooterView from "../views/FooterView";
 import NavigationView from "../views/NavigationView";
 import HeroView from "../views/HeroView";
+import LoaderView from "../views/LoaderView";
 
 const setPage = function () {
   const newPage = Router.handleRoute();
@@ -21,13 +22,15 @@ const controlRoutes = function () {
   });
 };
 
-const appController = async function () {
+const appController = function () {
   /* Checks and sets the current page */
   setPage();
 
   // Render all common elements on page.
   // Render navigation
-  NavigationView.render({ data: { currentPage: Model.state.currentPage } });
+  NavigationView.render({
+    data: { currentPage: Model.state.currentPage },
+  });
 
   // Render navigation
   HeroView.render({
@@ -41,6 +44,8 @@ const appController = async function () {
   /* This will add hanlder to routes. */
   /* And automatically handle route change view */
   Router.subscribeHandlerRoute(controlRoutes);
+
+  LoaderView.toggleLoader();
 };
 
 export default appController;

@@ -1,6 +1,6 @@
 import AboutView from "../views/AboutView";
 
-const aboutController = function () {
+const aboutController = async function () {
   AboutView.render();
 };
 

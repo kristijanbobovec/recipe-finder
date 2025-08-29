@@ -97,7 +97,6 @@ class FormView extends View {
 
   _removeAriaExpanded(noAriaRemove = "") {
     this._btns.forEach((btn) => {
-      // noAriaRemove -- on which button not to remove aria
       if (noAriaRemove === btn) return;
       btn.setAttribute("aria-expanded", false);
     });

@@ -1,6 +1,8 @@
 import View from "./View";
 
 class RecipesListView extends View {
+  _error = "No recipes found.";
+
   _generateMarkup() {
     return this._generateRecipeItems();
   }
@@ -13,11 +15,17 @@ class RecipesListView extends View {
           `
         <article class="recipes__item">
             <header class="recipes__header">
-              <div class="recipes__img">
-                <img
-                  src="./src/${recipe.image.small.slice(2)}"
-                  alt="${recipe.title}"
-                />
+              <div class="recipes__img skeleton">
+                <picture class="lazy-load">
+                  <source data-srcset="./src/${recipe.image.small.slice(2)}">
+
+                  <img
+                    src="./src/assets/images/placeholder-image-rectangle.webp"
+                    alt="Hero image"
+                    data-src="./src/${recipe.image.small.slice(2)}"
+                    class="u-responsive-img"
+                  />
+                </picture>
               </div>
               <div class="recipes__info">
                 <div class="recipes__description">

@@ -76,11 +76,18 @@ class HomeView extends View {
               got you covered.
             </p>
           </div>
-          <div class="section__image">
-            <img
-              src="./src/assets/images/image-home-real-life-large.webp"
-              alt="Home real life"
-            />
+          <div class="section__image skeleton">
+            <picture class="lazy-load">
+              <source media="(min-width: 701px)" data-srcset="./src/assets/images/image-home-real-life-large.webp">
+              <source media="(max-width: 700px)" data-srcset="./src/assets/images/image-home-real-life-small.webp">
+
+              <img
+                src="./src/assets/images/placeholder-image-rectangle.webp"
+                alt="Hero image"
+                data-src="./src/assets/images/image-home-real-life-small.webp"
+                class="u-responsive-img"
+              />
+            </picture>
           </div>
         </div>
       </section> 

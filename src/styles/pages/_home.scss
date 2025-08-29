@@ -42,17 +42,23 @@
     margin-top: px-to-rem($spacing-500);
     border-radius: $radius-10;
     box-shadow: $box-shadow-hero-img;
+    overflow: hidden;
+
+    picture {
+      width: 100%;
+      aspect-ratio: 16/8;
+
+      @include breakpoint(md) {
+        aspect-ratio: 4/3;
+      }
+    }
 
     @include breakpoint(lg) {
       box-shadow: $box-shadow-hero-img-lg;
-      object-fit: cover;
-      min-height: px-to-rem(250px);
     }
 
     @include breakpoint(sm) {
       box-shadow: $box-shadow-hero-img-sm;
-      object-fit: cover;
-      min-height: px-to-rem(200px);
     }
   }
 }

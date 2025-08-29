@@ -42,11 +42,15 @@
 
   .hero__image {
     flex: 1;
-    img {
-      border-radius: $radius-10;
-    }
+    border-radius: $radius-10;
 
     position: relative;
+
+    picture {
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: $radius-10;
+    }
 
     &::before {
       content: "";
@@ -59,7 +63,7 @@
       background: url("../../assets/images/pattern-squiggle-2.svg") no-repeat
         100% 70%;
 
-      @include breakpoint(lg) {
+      @include breakpoint(xlg) {
         width: 0;
         height: 0;
         background: none;

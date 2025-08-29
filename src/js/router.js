@@ -19,11 +19,17 @@ class Router {
 
   _hash;
   _controller;
+  _recipeID;
 
   handleRoute() {
     this._hash = window.location.hash.split("/")[0].slice(1);
     this._controller = this._routes[this._hash] || this._routes[""];
-    this._controller();
+
+    const recipeIDRaw = Number.parseInt(window.location.hash.split("/")[1]);
+    this._recipeID = Number.isFinite(recipeIDRaw) ? recipeIDRaw : -1;
+
+    if (this._hash === "recipe") this._controller(this._recipeID);
+    else this._controller();
 
     return this._routes[this._hash] ? this._hash : "";
   }

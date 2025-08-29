@@ -1,0 +1,16 @@
+/*
+*
+* Animations
+*
+*/
+@use "../abstracts" as *;
+
+@keyframes skeleton-loading {
+  0% {
+    background: $color-neutral-200;
+  }
+
+  100% {
+    background: $color-neutral-400;
+  }
+}

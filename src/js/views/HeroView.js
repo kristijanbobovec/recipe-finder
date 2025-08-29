@@ -29,12 +29,20 @@ class HeroView extends View {
                 tonight—no processed junk, no guesswork.
                 </p>
             </div>
-            <a href="#" class="btn btn--m text-preset-5">Start exploring</a>
-            <img
-                class="hero__image"
-                src="./src/assets/images/image-home-hero-large.webp"
-                alt="Hero image"
-            />
+            <a href="#recipes" class="btn btn--m text-preset-5">Start exploring</a>
+            <div class="hero__image skeleton">
+              <picture class="lazy-load">
+                <source media="(min-width: 701px)" data-srcset="./src/assets/images/image-home-hero-large.webp">
+                <source media="(max-width: 700px)" data-srcset="./src/assets/images/image-home-hero-small.webp">
+
+                <img
+                  src="./src/assets/images/placeholder-image-rectangle.webp"
+                  alt="Hero image"
+                  data-src="./src/assets/images/image-home-hero-small.webp"
+                  class="u-responsive-img"
+                />
+              </picture>
+            </div>
             </div>
         </div>
         `;
@@ -59,11 +67,18 @@ class HeroView extends View {
                 </p>
               </div>
             </div>
-            <div class="hero__image">
-              <img
-                src="./src/assets/images/image-about-our-mission-large.webp"
-                alt="Girl cutting carrot"
-              />
+            <div class="hero__image skeleton">
+              <picture class="lazy-load">
+                <source media="(min-width: 701px)" data-srcset="./src/assets/images/image-about-our-mission-large.webp">
+                <source media="(max-width: 700px)" data-srcset="./src/assets/images/image-about-our-mission-small.webp">
+
+                <img
+                  src="./src/assets/images/placeholder-image-rectangle.webp"
+                  alt="Hero image"
+                  data-src="./src/assets/images/image-about-our-mission-small.webp"
+                  class="u-responsive-img"
+                />
+              </picture>
             </div>
           </div>
         </div>

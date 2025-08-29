@@ -5,16 +5,16 @@ import FormView from "../views/FormView";
 
 const controlForm = function (data) {
   Model.filterRecipes(data);
-
   RecipesListView.render({ data: Model.state.filter.results });
 };
 
 const recipesController = async function () {
   try {
-    await Model.getRecipes();
     const [recipes, filterBar] = RecipesView.render({
       toReturn: [".recipes", ".filter-bar"],
     });
+
+    if (Model.state.recipes.length <= 0) await Model.getRecipes();
     RecipesListView.render({ data: Model.state.recipes, parentEl: recipes });
     FormView.render({ parentEl: filterBar, render: false });
 

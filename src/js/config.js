@@ -36,4 +36,7 @@ export const SOCIAL_MEDIA_LINKS = [
 ];
 
 /* Timeout seconds */
-export const TIMEOUT_SEC = 2;
+export const TIMEOUT_SEC = 15;
+
+/* Number Of featured recipes in recipe page */
+export const FEATURED_RECIPES = 3;

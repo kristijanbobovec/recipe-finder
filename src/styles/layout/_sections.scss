@@ -31,6 +31,10 @@
   &__image {
     border-radius: px-to-rem($radius-16);
     overflow: hidden;
+
+    picture {
+      aspect-ratio: 16/9;
+    }
   }
 
   &__description {

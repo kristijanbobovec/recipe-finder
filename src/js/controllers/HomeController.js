@@ -1,6 +1,6 @@
 import HomeView from "../views/HomeView";
 
-const homeController = function () {
+const homeController = async function () {
   HomeView.render();
 };
 
