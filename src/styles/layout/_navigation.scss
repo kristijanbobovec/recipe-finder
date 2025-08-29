@@ -38,6 +38,12 @@
     list-style: none;
     gap: px-to-rem(40px);
 
+    // Center navigation
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     @include breakpoint(lg) {
       display: none;
     }
@@ -47,12 +53,6 @@
         display: flex;
       }
     }
-
-    // Center navigation
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
     @include breakpoint(lg) {
       margin: 0 px-to-rem(32px);

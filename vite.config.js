@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import path from "path";
 
